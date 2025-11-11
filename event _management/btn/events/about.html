@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Event Management</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head1">
+            <h1>College Event Management System</h1>
+        </div>
+        <header class="header">
+
+            <nav>
+                <ul class="ul1">
+                    <li id="home">HOME</li>
+                    <li>ABOUT</li>
+                    <li id="event">EVENTS</li>
+                    <li id="login">STUDENT REGISTRATION / LOGIN</li>
+
+                </ul>
+            </nav>
+        </header>
+        <div class="head2">
+            <h2>ABOUT COLLEGE EVENT MANAGEMENT SYSTEM</h2>
+        </div>
+        <div class="about">
+            <div class="left-container">
+                The College Event Management System is a web-based application designed to simplify and digitalize the
+                process of organizing events within a college. It provides an interactive platform where students,
+                faculty,
+                and event coordinators can easily access and manage event-related information. The system aims to
+                eliminate
+                manual paperwork and reduce the time and effort required for event planning and registration. <br>
+                <br>
+                This project allows event coordinators to create and manage events efficiently by adding details such as
+                event name, description, date, rules, and requirements. Students can browse through the list of
+                available
+                events, read event details, and register online with just a few clicks. Once registered, they can track
+                their participation status, receive notifications, and stay updated with any changes made by the
+                organizers.
+                <br>
+                <br>
+                The backend system supports admin-level access, where administrators can manage users, approve or reject
+                event proposals, and monitor all ongoing and upcoming events. All data related to events and
+                participants is
+                stored securely in the database, ensuring that information is well-organized and easily accessible
+                whenever
+                needed. <br>
+                <br>
+                The main goal of this system is to streamline communication and coordination among students, teachers,
+                and
+                event coordinators. It helps reduce confusion regarding event schedules and provides a centralized
+                source of
+                accurate information. With its user-friendly layout, responsive design, and smooth scrolling system, the
+                platform ensures a modern and seamless experience for all users.
+                <br>
+                In the future, the system can be enhanced with additional features such as QR-based attendance tracking,
+                online payment collection for paid events, real-time notifications, and a mobile application version.
+                Overall, the College Event Management System delivers an efficient, reliable, and convenient solution
+                for
+                handling college events in a digital environment. <br>
+            </div>
+            <div class="right-container">
+                <img src="../images/evepro1.jpg" alt="img not found">
+                <img src="../images/evepro3.jpg" alt="img not found">
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let rebut = document.getElementById("login")
+
+        rebut.addEventListener('click', async () => {
+            window.location.href = "../logreg/index.html"
+        })
+
+        let event = document.getElementById("event")
+
+        event.addEventListener('click', async () => {
+            window.location.href = "event.html"
+        })
+        let home = document.getElementById("home")
+
+        home.addEventListener('click', async () => {
+            window.location.href = "../home.html"
+        })
+    </script>
+</body>
+
+</html>

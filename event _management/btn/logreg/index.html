@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>College Event Auth — Admin & User</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="shell">
+            <div class="panel-left">
+                <div class="brand">
+                    <div class="logo">CE</div>
+                    <div>
+                        <h1>College Events</h1>
+                        <p class="lead">Manage registrations and administration for campus events.</p>
+                    </div>
+                </div>
+                <div style="display:flex;gap:18px;align-items:center;justify-content:space-between">
+                    <div>
+                        <div style="font-size:13px;color:var(--muted);margin-bottom:8px">Choose role</div>
+                        <div class="switcher" role="tablist">
+                            <button id="role-user" class="active" onclick="setRole('user')">User</button>
+                            <button id="role-admin" onclick="setRole('admin')">Admin</button>
+                        </div>
+                    </div>
+                    <div style="text-align:right">
+                        <div class="small muted">Need help?</div>
+                        <div class="small" style="color:var(--muted)">contact@college.edu</div>
+                    </div>
+                </div>
+                <div style="margin-top:auto">
+                    <h3 style="margin:0 0 8px 0">Why separate pages?</h3>
+                    <p class="muted" style="margin:0;font-size:13px">Admins require an extra verification step (Admin
+                        Code) and different dashboard access. Students register with Student ID and course details.</p>
+                </div>
+            </div>
+            <div class="card" id="auth-card">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                    <div>
+                        <div id="role-title"><span class="role-badge user-badge">User</span></div>
+                        <h2 id="page-title">User Login</h2>
+                        <p class="desc" id="page-desc">Sign in to register for events and view your tickets.</p>
+                    </div>
+                    <div>
+                        <div class="small muted">Switch page</div>
+                        <div style="display:flex;gap:8px;margin-top:8px">
+                            <button class="btn ghost" onclick="showView('login')">Login</button>
+                            <button class="btn ghost" onclick="showView('register')">Register</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="views">
+                    <div id="login" class="view active">
+                        <form id="login-form" onsubmit="handleLogin(event)">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@student.edu" required />
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="••••••••" required />
+                            <div class="alt">
+                                <label style="display:flex;gap:8px;align-items:center"><input type="checkbox"
+                                        id="remember"> Remember me</label>
+                                <a href="#" class="small muted">Forgot password?</a>
+                            </div>
+                            <div style="display:flex;gap:10px;margin-top:6px">
+                                <button type="submit" class="btn primary">Sign in</button>
+                                <button type="button" class="btn ghost" onclick="switchRole()">Switch Role</button>
+                            </div>
+                            <div id="login-msg" aria-live="polite"></div>
+                        </form>
+                    </div>
+                    <div id="register" class="view">
+                        <form id="register-form" onsubmit="handleRegister(event)">
+                            <label for="fullname">Full name</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Your full name" required />
+                            <label for="reg-email">Email</label>
+                            <input type="email" id="reg-email" name="reg-email" placeholder="you@student.edu"
+                                required />
+                            <div id="extra-field"></div>
+                            <label for="reg-password">Password</label>
+                            <input type="password" id="reg-password" name="reg-password" placeholder="Create password"
+                                required />
+                            <div style="display:flex;gap:10px;margin-top:6px">
+                                <button class="btn primary" type="submit">Create account</button>
+                                <button type="button" class="btn ghost" onclick="showView('login')">Back to
+                                    Login</button>
+                            </div>
+                            <div id="register-msg" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+                <div
+                    style="border-top:1px solid rgba(255,255,255,0.02);padding-top:12px;margin-top:12px;display:flex;justify-content:space-between;align-items:center">
+                    <div class="footer-note">Built for BMSCE events</div>
+                    <div class="small muted">v1.1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

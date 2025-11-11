@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div>
+            <h1>College Event Management System</h1>
+        </div>
+        <header class="header">
+
+            <nav>
+                <ul class="ul1">
+                    <li id="home">HOME</li>
+                    <li id="about">ABOUT PROJECT</li>
+                    <li>EVENTS</li>
+                    <li id="login">STUDENT REGISTRATION / LOGIN</li>
+
+                </ul>
+            </nav>
+        </header>
+        <img id="navimg" src="event.jpg" alt="add image">
+
+        <div class="boxes">
+            <div class="box">
+                <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfltzeAhNA0HKj6kLSb5jhohjocQolUIzoG3em_yEuIu4WSoA/viewform ">
+                    <img class="img1" src="../images/evepro1.jpg" alt="image"></a>
+            </div>
+            <div class="box">
+                <a href="https://forms.gle/FbbHAk5TjrH81qqRA">
+                    <img class="img1" src="../images/evepro2.jpg" alt="image"></a>
+            </div>
+            <div class="box">
+                <a href="https://forms.gle/TGA8NV6R5iW38EHs7">
+                    <img class="img1" src="../images/evepro3.jpg" alt="image"></a>
+            </div>
+            <div class="box">
+                <a href="https://forms.gle/FHXsTNft2xctqmvh8">
+                    <img class="img1" src="../images/evepro4.jpg" alt="image"></a>
+            </div>
+            <div class="box">
+                <a href="http://seedglobal.io/503b60c0b">
+                    <img class="img1" src="../images/evepro5.jpg" alt="image"></a>
+            </div>
+            <div class="box">
+                <a href="https://forms.gle/FsJBv7pVqpA8abLs7
+">
+                    <img class="img1" src="../images/evepro6.jpg" alt="image"></a>
+            </div>
+            <div class="box">
+                <a href="https://forms.gle/TGA8NV6R5iW38EHs7">
+                    <img class="img1" src="../images/evepro3.jpg" alt="image"></a>
+            </div>
+            <div class="box">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfltzeAhNA0HKj6kLSb5jhohjocQolUIzoG3em_yEuIu4WSoA/viewform">
+                    <img class="img1" src="../images/evepro1.jpg" alt="image"></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    let rebut = document.getElementById("login")
+
+    rebut.addEventListener('click', async () => {
+        window.location.href = "../logreg/index.html"
+    })
+
+    let home = document.getElementById("home")
+
+    home.addEventListener('click', async () => {
+        window.location.href = "../home.html"
+    })
+
+    let about = document.getElementById("about")
+
+    about.addEventListener('click', async () => {
+        window.location.href = "about.html"
+    })
+</script>
+
+</html>
